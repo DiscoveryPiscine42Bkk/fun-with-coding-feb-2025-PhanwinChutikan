@@ -1,0 +1,79 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.parallax#section1 {
+    background-image: url('https://cdn.bhdw.net/im/mountain-nature-scenery-wallpaper-81094_w635.webp'); /* Replace with your first image URL */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax#section1 .message h1{
+    font-size: 14px;
+    text-align: center; 
+}
+
+
+.parallax#section2 {
+    background-image: url('https://www.lifewire.com/thmb/LpYMzRCsv3Cv6xXiC7Z7lF23tpk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/passage_wallpaper_by_trenchmaker-d4pp3zd-5919d0673df78cf5fa42884c.jpg'); /* Replace with your second image URL */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax#section2 .message h1{
+    font-size: 14px;
+    text-align: center; 
+}
+
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+
+.black-block {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.black-block .message h1 {
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
