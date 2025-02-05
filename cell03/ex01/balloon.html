@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        #balloon {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: red;
+        }       
+
+        #sizeDisplay{
+        font-size: 20px;
+        font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="balloon"></div>
+    <div id="sizeDisplay">Current Size: 200px</div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        const sizeDisplay = document.getElementById('sizeDisplay');
+
+        let size = 200;
+        let colors = ['red', 'green', 'blue'];
+        let curColor = 0;
+        
+        function updateSizeDisplay() {
+            sizeDisplay.textContent = `Current Size: ${size}px`;
+        }
+
+        balloon.addEventListener('click', () => {
+            size += 10;
+            if (size < 420) {
+                curColor = (curColor + 1) % colors.length;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+                balloon.style.backgroundColor = colors[curColor];
+            } else {
+                size = 200;
+                curColor = 0;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+                balloon.style.backgroundColor = colors[curColor];
+            }
+            updateSizeDisplay();
+        });
+
+        balloon.addEventListener('mouseleave', () => {
+            if (size > 200) {
+                size -= 5;
+                curColor = (curColor - 1 + colors.length) % colors.length;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+                balloon.style.backgroundColor = colors[curColor];
+            }
+            updateSizeDisplay();
+        });
+    </script>
+    
+    
+</body>
+</html>
