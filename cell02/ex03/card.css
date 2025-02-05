@@ -1,0 +1,73 @@
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.info-table {
+
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 15px 0;
+}
+
+.info-table td {
+    /* border: 1px solid black; */
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.info-table {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.contact-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
