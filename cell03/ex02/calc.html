@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="number"], select {
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Calculator</h1>
+        <form id="calculator-form">
+            <input type="text" id="left" placeholder="Enter left number" required>
+            <select id="operator" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="right" placeholder="Enter right number" required>
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+
+    <script>
+        // Function to calculate the result based on user input
+        function calculate(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get input values
+            let leftValue = document.getElementById('left').value;
+            let rightValue = document.getElementById('right').value;
+            let operator = document.getElementById('operator').value;
+
+            // Convert inputs to integers
+            leftValue = parseInt(leftValue);
+            rightValue = parseInt(rightValue);
+
+            // Check if the inputs are valid positive integers or string
+            if (isNaN(leftValue) || isNaN(rightValue) || leftValue < 0 || rightValue < 0) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            // Check for division by zero or modulo by zero
+            if ((operator === '/' || operator === '%') && rightValue === 0) {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+                return;
+            }
+
+            // Perform the calculation based on the operator
+            let result;
+            switch (operator) {
+                case '+':
+                    result = leftValue + rightValue;
+                    break;
+                case '-':
+                    result = leftValue - rightValue;
+                    break;
+                case '*':
+                    result = leftValue * rightValue;
+                    break;
+                case '/':
+                    result = leftValue / rightValue;
+                    break;
+                case '%':
+                    result = leftValue % rightValue;
+                    break;
+                default:
+                    result = "Invalid operator";
+                    break;
+            }
+
+            // Show result in alert and log to console
+            alert("Result: " + result);
+            console.log("Result: " + result);
+        }
+
+        // Add event listener to the form
+        document.getElementById('calculator-form').addEventListener('submit', calculate);
+
+        // Function for periodic alert every 30 seconds
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
