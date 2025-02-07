@@ -1,0 +1,52 @@
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+img {
+    width: 30vw;
+    min-width: 50vh;
+    aspect-ratio: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 2rem;
+}
+
+.navbar-collapse {
+    transition: all 1s;
+}
+
+#navbar {
+    background-color: #060920;
+}
+
+#about {
+    background-color: #060920;
+}
+
+#showcase {
+    background-image: url("https://cdn.discordapp.com/attachments/1167131010236956682/1337407566791311481/buddy_shocase.JPG?ex=67a7555b&is=67a603db&hm=91732ff21c9b10415cb59af768742c9dddf123a78ccb6ea63aebdad71bba558b&");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#showcase1 {
+    background-image: url("https://media.discordapp.net/attachments/633254595191373853/1337430376695730240/image.png?ex=67a76a9a&is=67a6191a&hm=474be4d01867037fe3b63e6e885dcf911334b85a4ff60d33243c587ffdffa88a&=&format=webp&quality=lossless&width=1440&height=477");
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#contact {
+    background-color: #060920;
+}

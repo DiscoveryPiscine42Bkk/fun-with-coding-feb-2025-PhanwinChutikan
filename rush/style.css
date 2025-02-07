@@ -1,0 +1,140 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+
+    perspective: 1px;
+    transform-style: preserve-3d;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.section1, .section2 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+    transform-style: preserve-3d;
+}
+
+.section1::before {
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(https://static.vecteezy.com/system/resources/previews/027/008/929/non_2x/flat-minimalistic-design-panorama-of-a-mountain-landscape-easy-to-change-colors-vector.jpg) top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(2px);
+}
+
+.section1::after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(https://media.discordapp.net/attachments/633254595191373853/1337345266323554364/basemount.png?ex=67a71b56&is=67a5c9d6&hm=52367020ea16bcbd17516d0b9c64a7bae253dc1d6537a9486c7ebaaea46ae051&=&format=webp&quality=lossless&width=1160&height=662) top center;
+    background-size: cover;
+}
+
+.section1 .text {
+    top: 10%;
+    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+    color: #033545;
+}
+
+.text {
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15vw;
+    color: #033545;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3), 5px 5px 10px rgba(255,255,255,0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(2, 30, 45), rgb(17, 45, 60));
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section2 h1 {
+    font-family: sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0e84ab;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%;
+    /* font-family: sans-serif; */    
+}
+
+.card-container, .h2{
+    font-family: sans-serif;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .section2 h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        width: 200px;
+    }
+}
+
